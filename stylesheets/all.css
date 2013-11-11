@@ -1,4 +1,51 @@
 @import "http://fonts.googleapis.com/css?family=Lato:400,700,900";
+/**** Isotope Filtering ****/
+/* line 4, /Users/kyktommy/Sites/portfolio/source/stylesheets/isotope.css */
+.isotope-item {
+  z-index: 2; }
+
+/* line 8, /Users/kyktommy/Sites/portfolio/source/stylesheets/isotope.css */
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1; }
+
+/**** Isotope CSS3 transitions ****/
+/* line 16, /Users/kyktommy/Sites/portfolio/source/stylesheets/isotope.css */
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s; }
+
+/* line 24, /Users/kyktommy/Sites/portfolio/source/stylesheets/isotope.css */
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width; }
+
+/* line 32, /Users/kyktommy/Sites/portfolio/source/stylesheets/isotope.css */
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity; }
+
+/**** disabling Isotope CSS3 transitions ****/
+/* line 44, /Users/kyktommy/Sites/portfolio/source/stylesheets/isotope.css */
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s; }
+
 /* line 12, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
 * {
   -webkit-box-sizing: border-box;
@@ -23,24 +70,27 @@ h1 {
   text-transform: uppercase;
   text-align: center; }
 
-/* line 34, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
-ul#tag-list li {
-  display: inline-block;
-  color: white;
-  background: #27ae60;
-  padding: 10px; }
-  /* line 38, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
-  ul#tag-list li:hover {
-    cursor: pointer;
-    background: #2ecc71; }
-  /* line 43, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
-  ul#tag-list li.active {
-    background: #e74c3c; }
+/* line 33, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+ul#tag-list {
+  text-align: center; }
+  /* line 37, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+  ul#tag-list li {
+    display: inline-block;
+    color: white;
+    background: #27ae60;
+    padding: 10px; }
+    /* line 41, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+    ul#tag-list li:hover {
+      cursor: pointer;
+      background: #2ecc71; }
+    /* line 46, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+    ul#tag-list li.active {
+      background: #e74c3c; }
 
-/* line 49, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+/* line 52, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
 ul#item-list {
   margin-top: 20px; }
-  /* line 53, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+  /* line 56, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
   ul#item-list li.item {
     position: relative;
     display: inline-block;
@@ -49,28 +99,20 @@ ul#item-list {
     background: rgba(0, 0, 0, 0.02);
     margin: 15px;
     padding: 20px; }
-    /* line 63, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
-    ul#item-list li.item:nth-child(4n+1) {
-      margin-left: 0; }
-    /* line 68, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
-    ul#item-list li.item:nth-child(4n) {
-      margin-right: 0; }
-    /* line 72, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+    /* line 75, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
     ul#item-list li.item > a {
-      -webkit-transition: all, 0.5s, ease-in-out, 0;
-      -moz-transition: all, 0.5s, ease-in-out, 0;
-      -o-transition: all, 0.5s, ease-in-out, 0;
-      transition: all, 0.5s, ease-in-out, 0; }
-    /* line 76, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
-    ul#item-list li.item > a {
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
       -webkit-filter: blur(1px);
       -moz-filter: blur(1px);
       filter: blur(1px); }
     /* line 80, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
     ul#item-list li.item > a:hover {
-      -webkit-filter: blur(0px);
-      -moz-filter: blur(0px);
-      filter: blur(0px); }
+      -webkit-filter: blur(0);
+      -moz-filter: blur(0);
+      filter: blur(0); }
     /* line 84, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
     ul#item-list li.item img {
       position: absolute;
@@ -94,13 +136,18 @@ ul#item-list {
           color: #2ecc71; }
       /* line 102, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
       ul#item-list li.item .description p {
-        line-height: 0.3em; }
+        margin: 2px; }
 
 /* line 109, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
 footer {
   margin-top: 90px;
-  font-size: 13px; }
-  /* line 112, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+  font-size: 13px;
+  clear: both;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 200px; }
+  /* line 117, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
   footer p {
-    line-height: 0.3em;
+    margin: 0;
     text-align: center; }
