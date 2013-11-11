@@ -1,0 +1,30 @@
+---
+title: kyk Portfolio
+layout: portfolio
+---
+
+<ul id="tag-list">
+  <li class="active">All</li>
+<% data.portfolio.map { |i| i.tag }.flatten.uniq.sort.each do |tag|  %>
+  <li><%= tag %></li>
+<% end %>
+</ul>
+
+<ul id="item-list">
+<% data.portfolio.each do |item| %>
+  <li class="item">
+    <a  class="non-active" href="<%= "portfolio/#{item.url}" %>">
+      <img src="<%= lorem.image('200x200') %>">
+      <div class="description">
+        <p class="link"><%= link_to item.name, "portfolio/#{item.url}" %></p>
+        <p class="desc"><%= item.desc || "" %></p>
+      </div>
+    </a>
+  </li>
+<% end %>
+</ul>
+
+<footer>
+  <p>This page used css3 and html5.</p>
+  <p>Please view this page using modern browser: chrome, firefox, safari.</p>
+</footer>
