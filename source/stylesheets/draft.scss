@@ -31,6 +31,9 @@ h1 {
 }
 
 ul#tag-list {
+
+  text-align: center;
+
   li {
     display: inline-block;
     @include btn($bg-color: $color_dark_green);
@@ -60,25 +63,22 @@ ul#item-list {
     padding: 20px;
 
     // First Child in row of 4
-    &:nth-child(4n+1) {
-      margin-left: 0;
-    }
+    // &:nth-child(4n+1) {
+    //   margin-left: 0;
+    // }
 
     // Last Child in row of 4
-    &:nth-child(4n) {
-      margin-right: 0;
-    }
-
-    & > a { 
-      @include transition(all, 0.5s, ease-in-out, 0);
-    }
+    // &:nth-child(4n) {
+    //   margin-right: 0;
+    // }
 
     & > a {
+      @include transition(all 0.5s ease);
       @include filter(blur(1px));
     }
 
     & > a:hover { 
-      @include filter(blur(0px)); 
+      @include filter(blur(0)); 
     }
 
     img { 
@@ -109,8 +109,13 @@ ul#item-list {
 footer {
   margin-top: 90px;
   font-size: 13px;
+  clear: both;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 200px;
   p {
-    line-height: 0.3em;
+    margin: 0;
     text-align: center;
   }
 }
