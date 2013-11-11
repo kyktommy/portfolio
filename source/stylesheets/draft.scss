@@ -1,0 +1,116 @@
+@import "compass/css3";
+
+$color_green: #2ecc71;
+$color_dark_green: #27ae60;
+
+@mixin btn($padding:10px, $color:white, $bg-color:$color_green) {
+  color: $color;
+  background: $bg-color; 
+  padding: $padding;
+}
+
+* { @include box-sizing(border-box); }
+
+body {
+  font-family: 'lato',Helvetica,Arial,sans-serif;
+  background: url('../images/wavegrid.png');
+  width: 920px;
+  margin: 0 auto;
+
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 { 
+  text-transform: uppercase;
+  text-align: center;
+}
+
+ul#tag-list {
+  li {
+    display: inline-block;
+    @include btn($bg-color: $color_dark_green);
+
+    &:hover {
+      cursor: pointer;
+      background: $color_green;
+    }
+
+   &.active {
+     background: #e74c3c;
+   }
+  }
+}
+
+ul#item-list {
+
+  margin-top: 20px;
+
+  li.item {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.02);
+    margin: 15px;
+    padding: 20px;
+
+    // First Child in row of 4
+    &:nth-child(4n+1) {
+      margin-left: 0;
+    }
+
+    // Last Child in row of 4
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    & > a { 
+      @include transition(all, 0.5s, ease-in-out, 0);
+    }
+
+    & > a {
+      @include filter(blur(1px));
+    }
+
+    & > a:hover { 
+      @include filter(blur(0px)); 
+    }
+
+    img { 
+      position: absolute;
+      top: 0; left: 0;
+    }
+
+    .description {
+      background: rgba(0, 0, 0, 0.02);
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 0 10px;
+      font-size: 0.8em;
+      a {
+        color: $color_dark_green;
+        text-decoration: none;
+        &:hover { color: $color_green; }
+      }
+      p {
+        line-height: 0.3em;
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: 90px;
+  font-size: 13px;
+  p {
+    line-height: 0.3em;
+    text-align: center;
+  }
+}
