@@ -137,7 +137,7 @@ ul#item-list {
       -o-transform: rotate(-5deg);
       transform: rotate(-5deg);
       color: red; }
-    /* line 114, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+    /* line 113, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
     ul#item-list li.item .description {
       background: rgba(0, 0, 0, 0.8);
       width: 100%;
@@ -146,19 +146,34 @@ ul#item-list {
       left: 0;
       padding: 0 10px;
       font-size: 0.8em; }
-      /* line 122, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+      /* line 121, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
       ul#item-list li.item .description a {
         color: #27ae60;
         text-decoration: none; }
-        /* line 125, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+        /* line 124, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
         ul#item-list li.item .description a:hover {
           color: #2ecc71; }
-      /* line 127, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+      /* line 126, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
       ul#item-list li.item .description p {
         color: white;
         margin: 2px; }
 
-/* line 135, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+/* line 134, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+.item {
+  width: 600px;
+  margin: 0 auto; }
+  /* line 138, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+  .item h3 {
+    font-size: 24px; }
+  /* line 139, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+  .item ul {
+    list-style-type: circle;
+    margin-left: 30px; }
+  /* line 143, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+  .item hr {
+    margin: 30px; }
+
+/* line 148, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
 footer {
   margin-top: 90px;
   font-size: 13px;
@@ -167,7 +182,7 @@ footer {
   bottom: 0px;
   right: 0px;
   width: 200px; }
-  /* line 143, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+  /* line 156, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
   footer p {
     margin: 0;
     text-align: center; }
