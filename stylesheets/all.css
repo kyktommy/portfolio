@@ -57,7 +57,8 @@ body {
   font-family: 'lato',Helvetica,Arial,sans-serif;
   background: url("../images/wavegrid.png");
   width: 920px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-bottom: 50px; }
 
 /* line 22, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
 ul {
@@ -74,23 +75,34 @@ h1 {
 ul#tag-list {
   text-align: center; }
   /* line 37, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
-  ul#tag-list li {
-    display: inline-block;
+  ul#tag-list .star {
+    display: block;
+    margin-bottom: 10px; }
+    /* line 41, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+    ul#tag-list .star li {
+      color: white;
+      background: #27ae60;
+      padding: 10px; }
+  /* line 46, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+  ul#tag-list .not-star li {
     color: white;
     background: #27ae60;
-    padding: 10px; }
-    /* line 41, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+    padding: 5px; }
+  /* line 50, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+  ul#tag-list li {
+    display: inline-block; }
+    /* line 53, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
     ul#tag-list li:hover {
       cursor: pointer;
       background: #2ecc71; }
-    /* line 46, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+    /* line 58, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
     ul#tag-list li.active {
       background: #e74c3c; }
 
-/* line 52, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+/* line 64, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
 ul#item-list {
   margin-top: 20px; }
-  /* line 56, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+  /* line 68, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
   ul#item-list li.item {
     position: relative;
     display: inline-block;
@@ -98,47 +110,55 @@ ul#item-list {
     height: 200px;
     background: rgba(0, 0, 0, 0.02);
     margin: 15px;
-    padding: 20px; }
-    /* line 75, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+    padding: 20px;
+    overflow: hidden; }
+    /* line 88, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
     ul#item-list li.item > a {
       -webkit-transition: all 0.5s ease;
       -moz-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-      -webkit-filter: blur(1px);
-      -moz-filter: blur(1px);
-      filter: blur(1px); }
-    /* line 80, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
-    ul#item-list li.item > a:hover {
-      -webkit-filter: blur(0);
-      -moz-filter: blur(0);
-      filter: blur(0); }
-    /* line 84, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
-    ul#item-list li.item img {
+      transition: all 0.5s ease; }
+    /* line 97, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+    ul#item-list li.item img, ul#item-list li.item .default-image {
+      width: 200px;
+      max-width: 200px;
+      height: auto;
       position: absolute;
       top: 0;
       left: 0; }
-    /* line 89, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+    /* line 105, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+    ul#item-list li.item .default-image {
+      height: 200px;
+      text-align: center;
+      line-height: 170px;
+      -webkit-transform: rotate(-5deg);
+      -moz-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+      -o-transform: rotate(-5deg);
+      transform: rotate(-5deg);
+      color: red; }
+    /* line 114, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
     ul#item-list li.item .description {
-      background: rgba(0, 0, 0, 0.02);
+      background: rgba(0, 0, 0, 0.8);
       width: 100%;
       position: absolute;
       bottom: 0;
       left: 0;
       padding: 0 10px;
       font-size: 0.8em; }
-      /* line 97, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+      /* line 122, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
       ul#item-list li.item .description a {
         color: #27ae60;
         text-decoration: none; }
-        /* line 100, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+        /* line 125, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
         ul#item-list li.item .description a:hover {
           color: #2ecc71; }
-      /* line 102, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+      /* line 127, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
       ul#item-list li.item .description p {
+        color: white;
         margin: 2px; }
 
-/* line 109, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+/* line 135, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
 footer {
   margin-top: 90px;
   font-size: 13px;
@@ -147,7 +167,7 @@ footer {
   bottom: 0px;
   right: 0px;
   width: 200px; }
-  /* line 117, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
+  /* line 143, /Users/kyktommy/Sites/portfolio/source/stylesheets/draft.scss */
   footer p {
     margin: 0;
     text-align: center; }
